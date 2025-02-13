@@ -20,3 +20,22 @@
 
 ![DJANGO](https://img.shields.io/badge/-Django-black?style=for-the-badge&logo=django)
 ![GraphQL](https://img.shields.io/badge/-GraphQL-black?style=for-the-badge&logo=GraphQL)
+
+
+## 📄 Развёртывание в Kubernetes  
+
+1. Создание namespace
+```bash
+kubectl create namespace pulse
+```
+
+2. Создание secret для доступа к Container Registry
+```bash
+kubectl create secret docker-registry cr-secret --docker-server=cr.selcloud.ru --docker-username=token --docker-password=ТОКЕН --namespace=pulse
+```
+
+3. Запуск приложений
+
+```bash
+kubectl apply -f kubernetes/ПУТЬ
+```

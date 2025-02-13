@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-deployment
+  namespace: pulse
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: backend-app
+    spec:
+      containers:
+        - name: backend-container
+          image: cr.selcloud.ru/pulse-teal/backend
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8000
+      dnsPolicy: ClusterFirst
+      imagePullSecrets:
+        - name: cr-secret
+  selector:
+    matchLabels:
+      app: backend-app
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-static-deployment
+  namespace: pulse
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: backend-static-app
+    spec:
+      containers:
+        - name: backend-static-container
+          image: cr.selcloud.ru/pulse-teal/backend-static
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
+      imagePullSecrets:
+        - name: cr-secret
+  selector:
+    matchLabels:
+      app: backend-static-app
