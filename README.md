@@ -9,7 +9,7 @@
 
 ## ℹ️ Информация
 Для деплоя используется **Kubernetes**, также мы используем **ci/cd** в **GitHub Actions** что-бы быстро деплоить `(Можете посмотреть в репозиториях)`  
-Ссылка на сайт — **gold-giveaway.ru**
+Ссылка на сайт — **pulse-work.ru**
 
 ## 📦 Контейнеры 
 #### Backend
@@ -21,6 +21,13 @@
 ![DJANGO](https://img.shields.io/badge/-Django-black?style=for-the-badge&logo=django)
 ![GraphQL](https://img.shields.io/badge/-GraphQL-black?style=for-the-badge&logo=GraphQL)
 
+#### Frontend
+
+- Ссылка — https://github.com/Pulse-teeeeam/frontend
+- Расположение — `cr.selcloud.ru/pulse-teal/frontend`
+- Технологии:
+
+![NEXTJS](https://img.shields.io/badge/-NextJS-black?style=for-the-badge&logo=nextjs)
 
 ## 📄 Развёртывание в Kubernetes  
 
