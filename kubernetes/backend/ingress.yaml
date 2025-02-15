@@ -22,4 +22,21 @@ spec:
                 name: backend-static-service
                 port:
                   number: 80
+    - host: hackathon-9.orb.ru
+      http:
+        paths:
+          - path: /backend
+            pathType: Prefix
+            backend:
+              service:
+                name: backend-service
+                port:
+                  number: 8000
+          - path: /backend/static
+            pathType: Prefix
+            backend:
+              service:
+                name: backend-static-service
+                port:
+                  number: 80
 
