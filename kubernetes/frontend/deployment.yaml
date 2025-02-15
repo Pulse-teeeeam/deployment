@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-deployment
+  namespace: pulse
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: frontend-app
+    spec:
+      containers:
+        - name: frontend-container
+          image: cr.selcloud.ru/pulse-teal/frontend
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3000
+      dnsPolicy: ClusterFirst
+      imagePullSecrets:
+        - name: cr-secret
+  selector:
+    matchLabels:
+      app: frontend-app
