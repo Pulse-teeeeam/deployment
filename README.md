@@ -20,6 +20,7 @@
 
 ![DJANGO](https://img.shields.io/badge/-Django-black?style=for-the-badge&logo=django)
 ![AmazonS3](https://img.shields.io/badge/-S3-black?style=for-the-badge&logo=AmazonS3)
+![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-black?style=for-the-badge&logo=PostgreSQL)
 
 #### Frontend
 
