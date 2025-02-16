@@ -19,7 +19,6 @@
 - Технологии:
 
 ![DJANGO](https://img.shields.io/badge/-Django-black?style=for-the-badge&logo=django)
-![GraphQL](https://img.shields.io/badge/-GraphQL-black?style=for-the-badge&logo=GraphQL)
 ![AmazonS3](https://img.shields.io/badge/-S3-black?style=for-the-badge&logo=AmazonS3)
 
 #### Frontend

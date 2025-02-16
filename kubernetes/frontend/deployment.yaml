@@ -16,6 +16,11 @@ spec:
           imagePullPolicy: Always
           ports:
             - containerPort: 3000
+          env:
+            - name: BASE_SERVER_URL_API
+              value: 'http://backend-service.pulse.svc.cluster.local:8000/backend'
+            - name: NEXT_PUBLIC_BASE_SERVER_URL_API_PUBLIC
+              value: 'https://pulse-work.ru/backend'
       dnsPolicy: ClusterFirst
       imagePullSecrets:
         - name: cr-secret
