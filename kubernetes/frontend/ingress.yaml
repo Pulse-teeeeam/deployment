@@ -5,7 +5,7 @@ metadata:
   namespace: pulse
 spec:
   rules:
-    - host: pulse-work.ru
+    - host: hackathon-9.orb.ru
       http:
         paths:
           - path: /
