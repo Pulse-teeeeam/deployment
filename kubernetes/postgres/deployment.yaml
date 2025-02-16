@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: postgres-statefulset
+  namespace: pulse
+spec:
+  serviceName: postgres-service
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: postgres-app
+    spec:
+      containers:
+        - name: postgres-container
+          image: postgres:17.2
+          ports:
+            - containerPort: 5432
+              name: postgres-cli
+          volumeMounts:
+            - mountPath: "/dev/shm"
+              name: postgres-pvc
+          env:
+            - name: POSTGRES_PASSWORD
+              value: Pc7ce&~&a5c4HDso&hh
+  selector:
+    matchLabels:
+      app: postgres-app
+
+  volumeClaimTemplates:
+    - metadata:
+        name: postgres-pvc
+      spec:
+        accessModes:
+          - ReadWriteOnce
+        resources:
+          requests:
+            storage: 300Mi

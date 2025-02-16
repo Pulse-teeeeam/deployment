@@ -20,7 +20,7 @@ spec:
             - name: BASE_SERVER_URL_API
               value: 'http://backend-service.pulse.svc.cluster.local:8000/backend'
             - name: NEXT_PUBLIC_BASE_SERVER_URL_API_PUBLIC
-              value: 'https://pulse-work.ru/backend'
+              value: 'https://hackathon-9.orb.ru/backend'
       dnsPolicy: ClusterFirst
       imagePullSecrets:
         - name: cr-secret
